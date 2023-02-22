@@ -1,0 +1,183 @@
+*{
+  padding: 0;
+  margin:0;
+}
+
+.pokemonLogo{
+  margin-top: 20px;
+}
+
+ .iconBar{
+ display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 200px;
+  flex-direction: column;
+  gap: 13%;
+  color: #090909;
+  width: 2.5em;
+  height: 2.5em;
+  border-width: 20px;
+  border-radius: 0.5em;
+  background: white;
+  border: 1px solid #e8e8e8;
+  transition: all .3s; 
+ cursor: pointer;
+
+};
+
+.iconBar:hover{
+  border: 1px solid white;
+}
+.iconBar:active{
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
+
+
+.containerCard{
+ display: inline-table;
+ margin: 5px;
+}
+
+.linkCards{
+  text-decoration: none;
+  color: blue;
+}
+
+.boxType{
+  background-color:#582F0E;
+  height: 235px;
+  width: 190px;
+  position: absolute;
+  top:calc(50%-250px);
+  left: -200px;
+  padding: 5px; 
+}
+
+
+
+.boxType.show{
+  left: 0;
+}
+
+.boxItem {
+  width: 100%;
+
+}
+
+/* .boxType p{
+  font-family: "Anybody";
+  font-size: small;
+  padding: 3px;
+  margin-top: 1px;
+} */
+
+
+/* filters */
+
+ .filterContainer{  
+  /* font-family:"Anybody" ;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #582F0E;    */
+  /* display: flex;
+  border-radius: 10px;
+  font-family: "Anybody";
+  width:100%;
+  justify-content: center; */
+  height: 40px; /* Alto fijo del contenedor */
+  margin-bottom: 10px; /* Margen inferior para separar los contenedores */
+  position: relative;
+ }
+
+.filterContainer select{
+  height: 100%; /* Altura del 100% para que se ajuste al contenedor */
+  width: 100%; /* Ancho del 100% para que ocupe todo el contenedor */
+  padding: 5px; /* Agregar un poco de espacio para separar el borde de la etiqueta */
+  color: white;
+  background-color: #582F0E;
+  border: none;
+  box-sizing: border-box; /* Asegurar que el borde se incluya en la altura y el ancho */
+  position: absolute; /* Posición absoluta para que se ajuste al contenedor */
+  top: 0; /* Ajustar la posición verticalmente */
+  left: 0; /* Ajustar la posición horizontalmente */
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid #aaa;
+}
+
+
+
+
+/* .filterContainer select:hover{
+  /* border-radius: 5px; */
+  /* font-family: "Anybody";
+  background-color:#582F0E;
+  text-align: center;
+  color: white; 
+  padding: 8px;
+  margin-left: 15px;
+  width: 180px;
+  left: 20px;
+  border: none; */
+  /* background: #1a95d5;
+
+  }  */ 
+
+ /* .iconsFilter{
+  position: absolute;
+  left:5px;
+  display: table-column;
+  background-color: #582F0E;
+ 
+}  */
+
+
+
+/* Botones */
+.btn_container{
+  display: flex;
+  justify-content: center;
+}
+
+.btn_create{
+    padding: 10px 20px;
+    /* background-color: #e2102c; */
+    background-color: #D62828;
+    font-family: "Anybody";
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.btn_create:hover{
+  /* background-color:#da243d ; */
+  background-color: #ca3a3a;
+}
+
+.btn_loading{
+ padding: 10px 20px; 
+    background-color: #D62828;
+    font-family: "Anybody";
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+}
+.btn_loading:hover{
+  /* background-color:#da243d ; */
+  background-color: #d04242;
+}
+
+
+

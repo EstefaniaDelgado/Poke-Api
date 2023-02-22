@@ -1,0 +1,43 @@
+.container{
+    display: block;
+    background-color: darkcyan;
+    min-height: 100vh;
+    min-width: 100vh;
+    justify-content: space-around;
+ 
+}
+.container h1{
+    font-size:50px ;
+    display: inline;
+    margin: 10px;
+}
+.container img{
+    background-color:blanchedalmond;
+    border: 10px solid black;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+  margin: auto;
+}
+.container button{
+    font-family: "Anybody";
+    outline: none;
+    border: none;
+    width: 200px;
+    padding: 0.3rem 0;
+    margin: 30px; 
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.errorInfo{
+    position: relative;
+    background-color: blanchedalmond;
+    padding: 20px;
+}

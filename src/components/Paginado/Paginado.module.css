@@ -1,0 +1,66 @@
+/* .paginado{
+    display: flex;
+    align-items: center;
+    
+} */
+
+
+.paginado ul{
+    background-color: #38b000;
+    list-style-type: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.paginado li{
+    display: inline;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.paginado li a{
+    display: inline-block;
+    text-align: center;
+    padding: 2px 7px 2 px 7px;
+    font-family: "Anybody";
+    color: #666;
+    background-color: #fefffe;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 35px;
+    height: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.paginado li a:hover{
+    background-color: #33333392;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn_group{
+    display: inline;
+    position: relative;
+}
+.buttons{
+    outline: none;
+    border: none;
+    width: 19px;
+    padding: 0.3rem 0;
+    margin: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;  
+}
+
+.iconArrows{
+    transition: transform 0.2s ease-in-out;
+}
+.iconArrows:hover{
+    transform: translateX(5px);  
+}
+
+
+
