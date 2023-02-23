@@ -52,7 +52,7 @@ export const postPokemons = (payload)=>{
             //  alert(results)
             swal(results, {
                 buttons: false,
-                timer: 3000,
+                timer:3000,
               });
            return dispatch({type:POST_POKEMON})
               
