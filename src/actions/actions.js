@@ -1,4 +1,5 @@
 import axios from "axios";
+import swal from "sweetalert";
 export const  GET_POKEMONS = "GET_POKEMONS";
 export const GET_TYPES = "GET_TYPES";
 export const POST_POKEMON = "POST_POKEMON";
@@ -48,7 +49,11 @@ export const postPokemons = (payload)=>{
         try {
        const info=  await axios.post('/pokemons',payload);
              const results = info.data
-             alert(results)
+            //  alert(results)
+            swal("This modal will disappear soon!", {
+                buttons: false,
+                timer: 3000,
+              });
            return dispatch({type:POST_POKEMON})
               
         } catch (error) {
