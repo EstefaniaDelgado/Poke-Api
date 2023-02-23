@@ -108,13 +108,13 @@ const PokemonCreated = () => {
              <input
               className={styles.name} 
                type="text"
-               value={input.name}
+               value={input.name.toLowerCase()}
                name="name"
                id="name"
                onChange={(e) => changeHandler(e)}
               
              />
-             {allPokemons.includes(input.name) ? <p style={{color:'blue'}}>This name already exist</p> : null }
+             {allPokemons.includes(input.name) ? <p style={{color:'red'}}>This name already exist</p> : null }
               {error.name && <p style={{ color: 'red' }}>{error.name}</p>}
             
           </div>
@@ -213,7 +213,7 @@ const PokemonCreated = () => {
          <div className={styles.filter_by_type}>
           {types.map((type) => {
             return (
-              <div className={styles.group_type} key={type.id}>
+              <div className={styles.group_type} key={type.id} >
                 <label>{type.name}</label>
                 <div  >
                 <input
@@ -222,6 +222,7 @@ const PokemonCreated = () => {
                   name={type.name}
                   value={type.name}
                   onChange={(e) => checkHandler(e)}
+                  
                 /> 
                 </div>
               </div>
