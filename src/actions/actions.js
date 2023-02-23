@@ -50,7 +50,7 @@ export const postPokemons = (payload)=>{
        const info=  await axios.post('/pokemons',payload);
              const results = info.data
             //  alert(results)
-            swal("This modal will disappear soon!", {
+            swal(results, {
                 buttons: false,
                 timer: 3000,
               });
