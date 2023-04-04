@@ -117,11 +117,8 @@ const Home = () => {
     <div className={styles.containerHome}>
 
 <img className={styles.pokemonLogo} src={International_Pokémon_logo} alt="logo" width={"300px"}/> 
-     
-     {/* ICON FILTER */}
-      <div className={styles.iconBar}>
-        <FontAwesomeIcon icon={faBars}  onClick={()=>handleToogle()}/>
-      </div>
+    
+<SearchBar />
      
       {/* Types */}
       <div className={`${styles.boxType} ${isActive ? styles.show : null}`}>   
@@ -130,7 +127,6 @@ const Home = () => {
         
        {/* FILTER BY TYPE */}
 
-   {/* <img className={styles.iconsFilter} src={typesFilter} alt="icon types" height={"25px"} /> */} 
    
      <div className={styles.filterContainer}>
 
@@ -147,9 +143,6 @@ const Home = () => {
         </div> 
 
          {/* filtro por ATTACK */}
-      {/* <p>Filter by Attack</p> */}
-        {/*  <img className={styles.iconsFilter} src={attackFilter} alt="icon attack" height={"30px"} width0={"10px"}/> */}
-        
         <div className={styles.filterContainer}>
         <select onChange={(e) => sortByAttackHandler(e)}>
            <option value="High_attack">Hight Attack</option>
@@ -158,9 +151,6 @@ const Home = () => {
          </div>
 
           {/* filtrado por CREADOS o de la API*/}
-          {/* <p>Filter by Api or Data Base</p> */}
-        {/* <img className={styles.iconsFilter} src={apiDb} alt="icon apiDb" height={"30px"}/>  */}
-
         <div className={styles.filterContainer}>
         <select onChange={(e) => filterCreatedHandler(e)}>
            <option value="all">All from API</option>
@@ -171,19 +161,12 @@ const Home = () => {
          
 
           {/* ORDEN por HP */}
-     {/*  <p>Order by Health Points</p> */}
-          {/* <img className={styles.iconsFilter} src={hpFilter} alt="icon hpFilter" height={"30px"}/>  */}
-
           <div className={styles.filterContainer}>
           <select onChange={(e) => sortHpHandler(e)}>
            <option value="high_hp">Long Health Points</option>
            <option value="low_hp">Few Health Points</option>
          </select> 
          </div>
-
-  {/*   ORDEN ALFABETICO a traves del name */}
-       {/* <p>Order Alphabetical</p> */}
-       {/* <img  className={styles.iconsFilter} src={abcFilter} alt="icon abcFilter" height={"30px"}/>  */}
 
        <div className={styles.filterContainer}>
        <select onChange={(e) => sortByNameHandler(e)}>
@@ -194,15 +177,6 @@ const Home = () => {
          
          </div>
         </div>  
-
-        
-        
- 
-        
-
-    
-      <SearchBar />
-
 
     <div className={styles.btn_container}>
       <div>

@@ -94,27 +94,28 @@ const PokemonCreated = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <form onSubmit={(e) => submitHandler(e)}>
        <div className={styles.containerTypes}>
         
        <div className={styles.header}>
         <h1>Create your Pokemon</h1>
+        <img src={botonCreated} alt="" />
       </div>
          <div className={styles.inputs}>
            {/* input para el name */}
-          <div className={styles.inputName}>
+          <div >
              <label htmlFor="name">Pokemon Name: </label>
              <input
               className={styles.name} 
                type="text"
-               value={input.name.toLowerCase()}
+               value={input.name}
                name="name"
                id="name"
                onChange={(e) => changeHandler(e)}
               
              />
-             {allPokemons.includes(input.name) ? <p style={{color:'red'}}>This name already exist</p> : null }
+             {allPokemons.includes(input.name) ? <p style={{color:'blue'}}>*This name already exist</p> : null }
               {error.name && <p style={{ color: 'red' }}>{error.name}</p>}
             
           </div>
@@ -135,11 +136,11 @@ const PokemonCreated = () => {
              className={styles.image}
              
            />
-           {!input.img ? <p style={{color:"blue"}}>{error.image}</p> : error.img && <p style={{ color: "red" }}>{error.img}</p> }
+           {!input.img ? <p style={{color:"blue", alignItems:"center"}}>{error.image}</p> : error.img && <p style={{ color: "red" }}>{error.img}</p> }
         {/*  {error.img && <p style={{ color: 'blue' }}>{error.img}</p>}  */}
          </div>
          </div>
-    <br />
+  
          {/* input para las estadisticas */}
         <div className={styles.points}>
            <label> Health Points {input.hp}</label>
@@ -206,34 +207,33 @@ const PokemonCreated = () => {
              onChange={(e) => changeHandler(e)}
              className={styles.statsInputs}
            />
-
-           <br />
-
-            {/* input para los types */}
-         <div className={styles.filter_by_type}>
-          {types.map((type) => {
-            return (
-              <div className={styles.group_type} key={type.id} >
-                <label>{type.name}</label>
-                <div  >
-                <input
-                  className={styles[type]}
-                  type="checkbox"
-                  name={type.name}
-                  value={type.name}
-                  onChange={(e) => checkHandler(e)}
-                  
-                /> 
-                </div>
-              </div>
-            )
-          })}
-           {error.types && <p className={styles.error_types}>{error.types}</p> } 
-
-              
-        </div> 
           </div>
-          <button  className={styles.btn_create}
+
+          {/* input para los types */}
+     <div className={styles.filter_by_type}>
+     {types.map((type) => {
+     return (
+       <div className={styles.group_type} key={type.id}>
+         <label>{type.name}</label>
+         < >
+         <input
+           className={styles[type]}
+           type="checkbox"
+           name={type.name}
+           value={type.name}
+           onChange={(e) => checkHandler(e)}
+         /> 
+         </>
+       </div>
+     )
+   })}
+    {error.types && <p className={styles.error_types}>{error.types}</p> }       
+ </div> 
+         
+        
+        </div >
+        <div className={styles.btn_buttons}>
+        <button 
           type="submit"
           disabled={
             !input.name ||
@@ -249,23 +249,16 @@ const PokemonCreated = () => {
             error.img ||
             disable
           }
+          className={styles.btn_create}
         >
           Create a Pokemon
         </button>
         
-        </div>
-
-        
-
-      </form>
-      
-      <br />
-
-      <Link to={'/home'}>
+        <Link to={'/home'}>
         <button className={styles.btn_back}>Back to Homepage</button>
-      </Link>
-
-      
+      </Link> 
+      </div>
+      </form> 
     </div>
   )
 }

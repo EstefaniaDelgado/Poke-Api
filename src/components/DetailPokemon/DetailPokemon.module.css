@@ -1,39 +1,19 @@
-:root{
-  --color-fire: #ff7402;
---color-grass: #9bcc50;
---color-steel: #9eb7b8;
---color-water: #4592c4;
---color-psychic: #f366b9;
---color-ground: #ab9842;
---color-ice: #51c4e7;
---color-flying: #3dc7ef;
---color-ghost: #4d5b64;
---color-normal: #a4acaf;
---color-poison: #7e0058;
---color-rock: #a38c21;
---color-fighting: #d56723;
---color-dark: #707070;
---color-bug: #729f3f;
---color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
---color-electric: #bba909;
---color-fairy: #fdb9e9;
---color-shadow: #7b62a3;
---color-unknow: #757575;
-
---color-primary: #006d77;
---color-primary-hover: #83c5be;
-}
-
-
-
 .container_detail{
-  display: block;
- /*  background-image: url("https://2img.net/h/media.pocketmonsters.net/imageboard/47/12769995460013.png");  */
-  background-size: cover;
+
+  /* background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-width: 100vh; 
-  min-height: 100vh; 
+  min-height: 100vh;  */
+  /* background: #a5be00; */
+  width: 100%;
+  margin: 60px 0;
+
+  
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;  
 }
 
 
@@ -41,15 +21,21 @@
   font-family: "Anybody";
   background-color: #fcffe9; 
   border-radius: 20px;
-  margin-top: 5px;
-  width: 280px;
-  height: 360px;
+  width: 290px;
+  height: 380px;
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-  margin-left: 390px;
-  text-align: center;
-  text-decoration: none; 
+  margin: 80px 0;
+ 
+  
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center; 
 }
 
+/* .cardDetail h1{
+  margin-right: 65px;
+} */
 
 .cardDetail img{
 	width: 150px;
@@ -58,8 +44,25 @@
 }
 
 
-.stat_group{
+/* .headings{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: flex-start;
+  align-items: flex-start;
+ 
+ 
+} */
+
+.headings i{
+  cursor: pointer;
+ 
+}
+
+
+
+.stat_group{
+    display: flex;
     flex-direction: column;
     text-align: left;
     margin-top: 5px;
@@ -119,83 +122,10 @@ input[type=range][name=ataque]::-moz-range-track {
   border-radius: 5px;
   color: black;  
 }
+
 .type{
   margin: 15px;
   
-}
-
-
-/* Types of Pokemon */
-.water {
-	background-color: var(--color-water);
-}
-
-.grass {
-	background-color: var(--color-grass);
-}
-
-.poison {
-	background-color: var(--color-poison);
-}
-
-.fire {
-	background-color: var(--color-fire);
-}
-
-.bug {
-	background-color: var(--color-bug);
-}
-
-.dragon {
-	background: var(--color-dragon);
-}
-
-.flying {
-	background-color: var(--color-flying);
-}
-
-.ground {
-	background-color: var(--color-ground);
-}
-
-.steel {
-	background-color: var(--color-steel);
-}
-
-.psychic {
-	background-color: var(--color-psychic);
-}
-
-.ice {
-	background-color: var(--color-ice);
-}
-
-.ghost {
-	background-color: var(--color-ghost);
-}
-
-.normal {
-	background-color: var(--color-normal);
-}
-
-.rock {
-	background-color: var(--color-rock);
-}
-
-.electric {
-	background-color: var(--color-electric);
-}
-
-.fighting {
-	background-color: var(--color-fighting);
-}
-
-.fairy {
-	background-color: var(--color-fairy);
-}
-
-.dark {
-	background-color: var(--color-dark);
 }
 
 .btn_back{
@@ -223,3 +153,14 @@ input[type=range][name=ataque]::-moz-range-track {
 
 }
 
+@media (max-width:1093px){
+  .cardDetail h1{
+  margin-right: 80px;
+}
+
+.cardDetail i{
+  color: #a5be00;
+  margin-right: 45px; 
+}
+
+}
