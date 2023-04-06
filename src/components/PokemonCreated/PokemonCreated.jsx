@@ -6,6 +6,7 @@ import { getPokemons, getTypes, postPokemons } from '../../actions/actions.js'
 import { Link, useHistory } from 'react-router-dom'
 import validate from './FunctionValidate.js'
 import styles from './PokemonCreated.module.css'
+import botonCreated from "../image/Imagen8.png"
 
 const PokemonCreated = () => {
 
@@ -44,7 +45,7 @@ const PokemonCreated = () => {
 
   useEffect(() => {
     const pokemons = allPokemons.includes(input.name)
-      ? setDisabled(true) 
+      ? setDisabled(true)
       : setDisabled(false)
   }, [input.name])
 
@@ -58,7 +59,7 @@ const PokemonCreated = () => {
       validate({
         ...input,
         [event.target.name]: event.target.value,
-        
+
       }),
     )
     console.log(error)
@@ -90,37 +91,36 @@ const PokemonCreated = () => {
         )
       : setInput(input);
     dispatch(postPokemons(input));
-    history.push('/home'); 
+    history.push('/home');
   };
 
   return (
     <div className={styles.container}>
       <form onSubmit={(e) => submitHandler(e)}>
-       <div className={styles.containerTypes}>
-        
+       <div className={styles.containerTypes} >
+
        <div className={styles.header}>
         <h1>Create your Pokemon</h1>
-        <img src={botonCreated} alt="" />
+        <img src={botonCreated} alt="logo_Pokemon" />
       </div>
-         <div className={styles.inputs}>
-           {/* input para el name */}
-          <div >
+     <div className={styles.inputs}>
+          {/* input para el name */}
+      <div >
              <label htmlFor="name">Pokemon Name: </label>
              <input
-              className={styles.name} 
+              className={styles.name}
                type="text"
                value={input.name}
                name="name"
                id="name"
                onChange={(e) => changeHandler(e)}
-              
+
              />
              {allPokemons.includes(input.name) ? <p style={{color:'blue'}}>*This name already exist</p> : null }
               {error.name && <p style={{ color: 'red' }}>{error.name}</p>}
-            
+
           </div>
-         
-        <br />
+
          <div>
            {/* input para la imagen */}
            <label htmlFor="Image" styles={{ height: '50px' }}>
@@ -134,16 +134,17 @@ const PokemonCreated = () => {
              onChange={(e) => changeHandler(e)}
              placeholder={' paste url image...'}
              className={styles.image}
-             
+
            />
            {!input.img ? <p style={{color:"blue", alignItems:"center"}}>{error.image}</p> : error.img && <p style={{ color: "red" }}>{error.img}</p> }
         {/*  {error.img && <p style={{ color: 'blue' }}>{error.img}</p>}  */}
          </div>
          </div>
-  
-         {/* input para las estadisticas */}
-        <div className={styles.points}>
-           <label> Health Points {input.hp}</label>
+
+
+       {/* input para las estadisticas */}
+       <div className={styles.points}>
+            <label> Health Points {input.hp}</label>
            <input
              type="range"
              value={input.hp}
@@ -153,7 +154,7 @@ const PokemonCreated = () => {
              onChange={(e) => changeHandler(e)}
              className={styles.statsInputs}
            />
-           
+
            <label>Attack {input.attack}</label>
            <input
              type="range"
@@ -164,7 +165,7 @@ const PokemonCreated = () => {
              onChange={(e) => changeHandler(e)}
              className={styles.statsInputs}
            />
-           
+
            <label>Defense {input.defense}</label>
            <input
              type="range"
@@ -175,7 +176,7 @@ const PokemonCreated = () => {
              onChange={(e) => changeHandler(e)}
              className={styles.statsInputs}
            />
-           
+
            <label>Speed {input.speed}</label>
            <input
              type="range"
@@ -185,7 +186,7 @@ const PokemonCreated = () => {
              name="speed"
              onChange={(e) => changeHandler(e)}
            />
-           
+
            <label>Height {input.height}</label>
            <input
              type="range"
@@ -196,7 +197,7 @@ const PokemonCreated = () => {
              onChange={(e) => changeHandler(e)}
              className={styles.statsInputs}
            />
-           
+
            <label>Weight {input.weight}</label>
            <input
              type="range"
@@ -209,7 +210,8 @@ const PokemonCreated = () => {
            />
           </div>
 
-          {/* input para los types */}
+
+           {/* input para los types */}
      <div className={styles.filter_by_type}>
      {types.map((type) => {
      return (
@@ -222,18 +224,18 @@ const PokemonCreated = () => {
            name={type.name}
            value={type.name}
            onChange={(e) => checkHandler(e)}
-         /> 
+         />
          </>
        </div>
      )
    })}
-    {error.types && <p className={styles.error_types}>{error.types}</p> }       
- </div> 
+    {error.types && <p className={styles.error_types}>{error.types}</p> }
+ </div>
+
          
-        
-        </div >
-        <div className={styles.btn_buttons}>
-        <button 
+      
+         <div className={styles.btn_buttons}>
+        <button
           type="submit"
           disabled={
             !input.name ||
@@ -253,13 +255,22 @@ const PokemonCreated = () => {
         >
           Create a Pokemon
         </button>
-        
+
         <Link to={'/home'}>
         <button className={styles.btn_back}>Back to Homepage</button>
       </Link> 
+
+      </div >
+
       </div>
-      </form> 
-    </div>
+
+      </form>
+
+
+      </div>
+
+
+    
   )
 }
 
@@ -275,12 +286,3 @@ export default PokemonCreated
 
 
 
-
-// if (input.name.match("^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$")) {
-//   setError([])
-//   //console.log("nombre valido")
-// } else {
-//   setError( 'Cannot type special simbols')
-//   //console.log("Cannot type special simbols")
-// }
-// console.log(input.img)

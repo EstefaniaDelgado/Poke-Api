@@ -1,7 +1,12 @@
+*{
+  margin:0px;
+  padding: 0px;
+  
+}
+
 body {
   margin: 0;
   background: url("https://pm1.narvii.com/6163/f381759eeceaf6dd821b9f50b1188b46b04e7d51_hq.jpg");
-  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -14,9 +19,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* 
-"./components/image/backgroundImage1.png" */
-/* 
-'https://i.pinimg.com/originals/5f/d2/3d/5fd23d2b36e69a0bc87030fbabb2a4c9.jpg' */
 
-/* "https://i.pinimg.com/originals/ed/ae/3a/edae3a151d7e0a04881d8bff8e77f1d5.jpg" */
+

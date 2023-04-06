@@ -4,164 +4,186 @@ body{
   font-family: "Anybody";
 }
 
-
-:root{
- --color-grass: #9bcc50;
- } 
-
- .container{
+.container{
   margin:10px;
   padding: 10px;
-  width: fit-content;
   background: #9bcc50;
 
 
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+ }
+
+ .containerTypes{
+ 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+ }
+
+ .header{
+  margin: 20px 0;
+  background: red;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+ }
+
+ .header h1{
+  padding: 5px;
+ }
+
+ .inputs .name{
+  padding: 10px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  border: none;
+ }
+
+ .inputs .image{
+  padding: 10px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  border: none;
+ }
+
+ .points{
+  padding: 15px;
+ 
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+ }
+
+ .statsInputs{
+  margin: 5px;  
+ }
+
+ .filter_by_type{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+ }
+
+ .group_type{
+  padding: 10px;
+  width: 100px;
+  height: 30px;
+  background-color: whitesmoke;
+  margin-right: 0;
+  cursor: pointer;
+
+  text-align: center;
+  align-self: center;
+ }
+
+ .btn_buttons{
+  margin: 10px;
+
+
+  display: flex;
+  flex-direction:row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   
  }
 
- .containerTypes{
-   margin: 2px 0;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
- }
-
- .header{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-self: center;
- }
- 
- .header h1{
-   padding: 5px;  
- } 
-
- .inputs{
-  padding: 20px;
-  margin: 5px 10px;
-  border-radius: 5px;
+ .btn_create{
+  padding: 10px 20px;
+  background-color: rgb(214,27,214);
   border: none;
-  outline: none;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-self: center;
-
-
+  border-radius: 5px;
+  margin: 0 10px;
  }
 
- .name{
-  padding: 10px;
-  margin: 5px 10px;
-  margin-left: 10px;
-  border-radius: 5px;
+ .btn_back{
+  padding: 10px 20px;
+  background-color: #6032a8;
   border: none;
-  outline: none;
+  border-radius: 5px;
+  margin: 0 10px;
+ }
+
+ @media (max-width:1280px){
+
+  .container{
+    margin:10px;
+    padding: 10px;
+    width: fit-content;
+    background: #9bcc50;
   
- }
+  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+   }
 
- .image{
-  padding: 10px;
-  margin: 5px 10px;
-  margin-left: 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
- }
+   .containerTypes{
+    margin: 2px 0;
+  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   }
 
- .points{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 35px;
- 
- }
-
- .statsInputs{
-  margin:  5px;
- } 
-
- .filter_by_type{
+   .inputs{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    flex-wrap: wrap;
    justify-content: center;
-   align-content: center;
+   align-self: center;
+   }
 
-} 
+   .name .image{
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    border: none;
+   }
 
-.group_type{
-  padding: 10px;
-  width: 100px;
-  height: 30px;
-  background-color:whitesmoke;
-  margin-right: 0;
-  cursor: pointer;
-
-  text-align: center;
-  align-self: center;
-}
-
-.btn_buttons{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 10px;
-
-}
-
-.btn_create{
-  padding: 10px 20px; 
-  background-color: rgb(214, 27, 214);
-  border: none;
-  border-radius: 5px;
-  margin: 0 10px;
-}
-
-.btn_back{
-  padding: 10px 20px; 
-  background-color:#6032a8 ;
-  border: none;
-  border-radius: 5px;
-  margin: 0 10px;
-}
-/* .error_types{
-
-  color: blue;
-  position: absolute;
-  top:230px;
-  right: 180px;
-  font-weight: 600px;
-  font-family: "Anybody";
-  font-size: medium; 
-
+   .points{
+    padding: 35px;
   
-} */
-@media (max-width:400px){
-  .header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-   }   
+   }
+
+   .statsInputs{
+    margin: 5px;
+   }
+
+ }
+
+ @media (max-width:400px){
+  .header{
+    margin: 50px 0;
+  }
 
   .btn_back{
-    padding: 10px 20px; 
-    background-color:#6032a8 ;
-    border: none;
-    border-radius: 5px;
     margin: 10px;
-
   }
-}
+ }
+
+
+
+
