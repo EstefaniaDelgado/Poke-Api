@@ -9,6 +9,7 @@
     background-color: #38b000;
     list-style-type: none;
     text-align: center;
+    margin: 10px;
     padding: 20px;
 }
 
@@ -62,5 +63,8 @@
     transform: translateX(5px);  
 }
 
-
-
+@media (max-width:620px){
+    .paginado ul{
+        margin: 10px;
+    }
+  }
