@@ -12,8 +12,9 @@ body{
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
   
  }
 
@@ -181,6 +182,18 @@ body{
   .btn_back{
     margin: 10px;
   }
+ }
+
+ @media (max-width:350px){
+  .header{
+    margin: 20px 0;
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   }
  }
 
 
