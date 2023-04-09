@@ -125,11 +125,12 @@ const Home = () => {
 
        <div>
         
-       {/* FILTER BY TYPE */}
+       
 
    
      <div className={styles.filterContainer}>
-
+       
+      
        <select onChange={(e) => filterHandler(e)}>
       <option value="all">All Pokémons Types</option>
       {allTypes.map((type) => {
@@ -140,42 +141,37 @@ const Home = () => {
               )
             })}  
           </select>
-        </div> 
 
-         {/* filtro por ATTACK */}
-        <div className={styles.filterContainer}>
-        <select onChange={(e) => sortByAttackHandler(e)}>
+             
+          <select onChange={(e) => sortByAttackHandler(e)}>
            <option value="High_attack">Hight Attack</option>
            <option value="Low_attack">Low Attack</option>
          </select>
-         </div>
 
-          {/* filtrado por CREADOS o de la API*/}
-        <div className={styles.filterContainer}>
-        <select onChange={(e) => filterCreatedHandler(e)}>
+         
+         <select onChange={(e) => filterCreatedHandler(e)}>
            <option value="all">All from API</option>
            <option value="created">Created</option>
            <option value="api">Existing</option>
          </select>
-         </div>
-         
 
-          {/* ORDEN por HP */}
-          <div className={styles.filterContainer}>
-          <select onChange={(e) => sortHpHandler(e)}>
+
+         <select onChange={(e) => sortHpHandler(e)}>
            <option value="high_hp">Long Health Points</option>
            <option value="low_hp">Few Health Points</option>
          </select> 
-         </div>
 
-       <div className={styles.filterContainer}>
-       <select onChange={(e) => sortByNameHandler(e)}>
+
+         <select onChange={(e) => sortByNameHandler(e)}>
            <option value="asc">A-Z</option>
            <option value="desc">Z-A</option>
          </select>
+
+
+        </div> 
+
          </div>
-         
-         </div>
+
         </div>  
 
     <div className={styles.btn_container}>

@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@100;200;500&family=Comic+Neue&family=Rubik+Bubbles&family=Ubuntu:ital,wght@0,300;1,300&display=swap');
  
- :root{
+/*  :root{
   --mb-1: .5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
   --mb-4: 2rem;
-} 
+}  */
 
 .containerHome{
   width: 100%;
   max-width: 1300px;
-  margin: 20px auto;
+  margin: 20px;
   font-family: "Anybody";
 
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
@@ -27,21 +27,19 @@
 }
 
 .filterContainer{
-   margin: 0 10px 0 10px;
-   padding: 10px;
-
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-
+  padding: 10px;
+  
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ 
 }
 
 .filterContainer select{
    height: 30px;
-   margin: 0 5px;
+   margin: 0 10px;
    border-radius: 5px;
    border: none;
    color: #fff;
@@ -63,7 +61,7 @@ select:focus {
 
 .btn_container button{
   padding: 10px 20px;
-  margin: 10px;
+  margin: 20px 10px;
   background-color: #D62828;
   font-family: "Anybody";
   border: none;
@@ -128,4 +126,14 @@ button:hover{
     max-width: 1000px;
     margin: 20px auto;
   }
+}
+
+@media (max-width:620px){
+  .filterContainer select{
+    margin: 10px 10px;  
+ }
+
+ .btn_container button{
+  margin: 10px 10px;
+}
 }
