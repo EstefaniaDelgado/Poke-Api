@@ -4,9 +4,14 @@
     
 } */
 
+/* *{
+    margin: 0;
+} */
+
 
 .paginado ul{
     background-color: #38b000;
+    width: 100%;
     list-style-type: none;
     text-align: center;
     margin: 10px;

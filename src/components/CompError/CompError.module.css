@@ -1,16 +1,20 @@
 .container{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
     background-color: darkcyan;
     min-height: 100vh;
-    min-width: 100vh;
-    justify-content: space-around;
- 
+    min-width: 100vh; 
 }
+
 .container h1{
     font-size:50px ;
     display: inline;
     margin: 10px;
 }
+
 .container img{
     background-color:blanchedalmond;
     border: 10px solid black;
@@ -21,7 +25,18 @@
   margin: auto;
 }
 .container button{
-    font-family: "Anybody";
+   
+        padding: 10px 20px;
+        margin: 20px 10px;
+        background-color: #D62828;
+        font-family: "Anybody";
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      
+    /* font-family: "Anybody";
     outline: none;
     border: none;
     width: 200px;
@@ -33,7 +48,7 @@
     color: black;
     background-color: yellow;
     border-radius: 8px;
-    cursor: pointer;
+    cursor: pointer; */
 }
 
 .errorInfo{
