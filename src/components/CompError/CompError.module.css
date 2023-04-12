@@ -1,18 +1,16 @@
 .container{
     background-color: darkcyan;
     height:100vh ;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    
-    /* min-height: 100vh;
-    min-width: 100vh;  */
 }
 
 .errorInfo{
-    /* position: relative; */
+    
     background-color: blanchedalmond;
     margin: 50px 0;
     padding: 20px;
@@ -26,7 +24,14 @@
 
 .container h1{
     font-size:50px;
-    padding: 10px;
+}
+
+.title{
+    padding: 15px;
+}
+
+.number{
+    padding: 5px;
 }
 
 .container img{
@@ -36,7 +41,7 @@
 	width: 100px;
 	height: 100px;
 	text-align: center;
- /*  margin: auto; */
+    margin: 0;
 }
 
 .container button{
