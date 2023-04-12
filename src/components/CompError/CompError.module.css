@@ -1,18 +1,32 @@
 .container{
+    background-color: darkcyan;
+    height:100vh ;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    background-color: darkcyan;
-    min-height: 100vh;
-    min-width: 100vh; 
+    
+    /* min-height: 100vh;
+    min-width: 100vh;  */
+}
+
+.errorInfo{
+    /* position: relative; */
+    background-color: blanchedalmond;
+    margin: 50px 0;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .container h1{
-    font-size:50px ;
-    display: inline;
-    margin: 10px;
+    font-size:50px;
+    padding: 10px;
 }
 
 .container img{
@@ -22,10 +36,10 @@
 	width: 100px;
 	height: 100px;
 	text-align: center;
-  margin: auto;
+ /*  margin: auto; */
 }
+
 .container button{
-   
         padding: 10px 20px;
         margin: 20px 10px;
         background-color: #D62828;
@@ -35,24 +49,6 @@
         color: #fff;
         font-size: 16px;
         cursor: pointer;
-      
-    /* font-family: "Anybody";
-    outline: none;
-    border: none;
-    width: 200px;
-    padding: 0.3rem 0;
-    margin: 30px; 
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    color: black;
-    background-color: yellow;
-    border-radius: 8px;
-    cursor: pointer; */
 }
 
-.errorInfo{
-    position: relative;
-    background-color: blanchedalmond;
-    padding: 20px;
-}
+

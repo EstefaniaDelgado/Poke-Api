@@ -1,5 +1,4 @@
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
 import DetailPokemon from './components/DetailPokemon/DetailPokemon';
 import ComponenteError from './components/CompError/CompError';
 import Home from './components/Home/Home';
