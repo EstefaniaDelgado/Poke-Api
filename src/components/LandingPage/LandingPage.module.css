@@ -3,26 +3,35 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-width: 100vh; 
-    min-height: 100vh; 
+    height: 100vh;
+    /* min-width: 100vh; 
+    min-height: 100vh; */ 
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;  
+    align-items: center;  
+}
+
+.logo{
+    height: 200px;
+    width: 400px;
+    padding: 10px;
+    margin: 0 30px;
+    flex-shrink: 1;
 }
 
 .pikachu{
-   margin-top: 40px;
+    flex-shrink: 1;
+    margin: 0 0;
+
 } 
 
 .btn_landing{
     font-family: "Anybody";
-    position:absolute;
-    margin-top: 350px;
-    margin-left: 150px; 
     padding: 17px 40px;
+    margin: 0 100px;
     border-radius: 10px;
     border: 0;
     background-color: rgb(255, 56, 86);
@@ -45,19 +54,9 @@
 }
 
 /* RESPONSIVE */
-@media (max-width:800px){
-    .container{
-        background-image:url("https://pokemonletsgo.pokemon.com/assets/img/kanto-region/p02_01.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        min-width: 100vh; 
-        min-height: 100vh; 
-    
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;  
+@media (max-width:470px){
+    .btn_landing{
+        padding: 5px;
+        padding: 17px 40px;
     }
 }

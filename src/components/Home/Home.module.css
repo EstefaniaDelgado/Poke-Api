@@ -18,7 +18,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  text-decoration: none;
 }
 
 .pokemonLogo{
@@ -81,15 +80,12 @@ button:hover{
   display:inline-block;
   justify-content: center;
   align-content: center;
-  text-decoration: none;
 }  
 
 .cardPokemon{
   display: inline-block;
   vertical-align:top;
-  text-decoration: none;
-
-}
+ }
 
 .imgLoading {
   display:flex;
@@ -118,6 +114,9 @@ button:hover{
   background-color: var(--first-color);
 }
 
+.linkCards{
+  text-decoration: none;
+}
 
 /* Responsive */
 

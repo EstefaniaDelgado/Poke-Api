@@ -11,15 +11,13 @@ const LandingPage = () => {
     
     <div className={styles.container} >
         
-        <Link to={'/home'}>
+       <img src={logoPokemon} className={styles.logo} alt="logo_pokemon" />
+        
+       <img src={landingImage} alt="image_pokemon" width={"300px"} height={"300px"} className={styles.pikachu} />  
+
+       <Link to={'/home'}>
         <button className={style.btn_landing}>Start!!</button>
         </Link> 
-
-       <img src={logoPokemon} alt="logo_pokemon" width={"400px"} height={"200px"} />
-        
-      
-
-       <img src={landingImage} alt="image_pokemon" width={"300px"} height={"300px"} className={styles.pikachu} />  
 
       
 
