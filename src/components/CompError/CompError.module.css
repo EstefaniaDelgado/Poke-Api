@@ -56,13 +56,10 @@
         cursor: pointer;
 }
 
-@media (min-width:407px){
-    .title{
-    padding: 5px;
-}
+@media (min-width:300px){
 
 .number{
-    display: inline;
-    padding: 5px;
+    display: inline-block;
+    /* padding: 5px; */
 }
   }
