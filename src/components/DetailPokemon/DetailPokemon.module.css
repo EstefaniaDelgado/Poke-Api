@@ -38,13 +38,13 @@
 } */
 
 .cardDetail img{
-	width: 150px;
+	width: 200px;
 	height: 150px;
   margin: auto; 
 }
 
 
-/* .headings{
+.headings{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -52,7 +52,7 @@
   align-items: flex-start;
  
  
-} */
+}
 
 .headings i{
   cursor: pointer;
@@ -154,13 +154,25 @@ input[type=range][name=ataque]::-moz-range-track {
 }
 
 @media (max-width:1093px){
-  .cardDetail h1{
+
+.cardDetail h1{
   margin-right: 80px;
 }
 
 .cardDetail i{
-  color: #a5be00;
   margin-right: 45px; 
 }
 
 }
+
+@media (max-width:2000px){
+
+.cardDetail h1{
+    margin-right: 50px;
+  }
+  
+.cardDetail i{
+  margin-right: 45px; 
+}
+}
+

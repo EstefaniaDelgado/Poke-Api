@@ -47,17 +47,19 @@ const DetailPokemon = ()=>{
    {
      pokemonDetail.name ? 
      <div className={styles.cardDetail}>
-     {/* NAME */}
+     {/* ICONS  */}
      <div className={styles.headings}>
      <Link to={"/home"} ><i className="material-icons" style={{color:"#a5be00"}}>cancel</i></Link> 
      
      {pokemonDetail.createdInDb ? <i className="material-icons" style={{color: "red"}} onClick={(e)=>deleteHandler(e)}>delete</i> : null}
-    
+
+     <h1 className={styles.header}>{pokemonDetail.name}</h1>
+
      </div>
 
      
      {/* IMAGE */}
-     <h1 className={styles.header}>{pokemonDetail.name}</h1>
+     
      
       <img src={pokemonDetail.img} alt="Image not found" width="230px" height="200px"/>
 
@@ -97,6 +99,13 @@ const DetailPokemon = ()=>{
     
     <div className={styles.stat}>
      <label className={styles.stat_bar_label} for="range"> Health Points : <span className={styles.statNumber}>{pokemonDetail.hp}</span>
+     <input class={styles.stat_bar_fill} type="range"  min="0"
+        max='200' disabled value={pokemonDetail.hp} />
+     </label>
+     </div>
+
+     <div className={styles.stat}>
+     <label className={styles.stat_bar_label} for="range"> Height : <span className={styles.statNumber}>{pokemonDetail.hp}</span>
      <input class={styles.stat_bar_fill} type="range"  min="0"
         max='200' disabled value={pokemonDetail.hp} />
      </label>
