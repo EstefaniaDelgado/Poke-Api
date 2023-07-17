@@ -67,48 +67,48 @@ const DetailPokemon = ()=>{
       <div className={styles.stat_group}>
 
       <div  className={styles.stat}>      
-     <label className={styles.stat_bar_label} for="range">Attack:  
+     <label className={styles.stat_bar_label} for="range">Attack: </label> 
   <span className={styles.statNumber}>{pokemonDetail.attack}</span>   
      <input class={styles.stat_bar_fill}  type="range" min="0"
         max='200' disabled name="attack" value={pokemonDetail.attack} />
-     </label>
+     
      </div>
 
     <div className={styles.stat}>
-     <label className={styles.stat_bar_label} for="range">Defense:       <span className={styles.statNumber}>{pokemonDetail.defense}</span>
+     <label className={styles.stat_bar_label} for="range">Defense: </label>      <span className={styles.statNumber}>{pokemonDetail.defense}</span>
      <input class={styles.stat_bar_fill}  type="range" min='0'
         max='200' disabled value={pokemonDetail.defense}/>
-     </label>
+     
      </div>
 
      <div className={styles.stat}>
-     <label className={styles.stat_bar_label} htmlFor="range">Speed: 
+     <label className={styles.stat_bar_label} htmlFor="range">Speed: </label>
      <span className={styles.statNumber}>{pokemonDetail.speed}</span>
      <input class={styles.stat_bar_fill}  type="range" min='0'
         max='200' disabled  value={pokemonDetail.speed}/>
-     </label>
+     
      </div>
 
      <div className={styles.stat}>
-     <label className={styles.stat_bar_label} for="range">Weight: 
+     <label className={styles.stat_bar_label} for="range">Weight: </label>
      <span className={styles.statNumber}>{pokemonDetail.weight}</span>
      <input class={styles.stat_bar_fill}  type="range" min="0"
         max="1050" disabled value={pokemonDetail.weight}/>
-     </label>
+     
      </div>
     
     <div className={styles.stat}>
-     <label className={styles.stat_bar_label} for="range"> Health Points : <span className={styles.statNumber}>{pokemonDetail.hp}</span>
+     <label className={styles.stat_bar_label} for="range"> Health Points : </label> <span className={styles.statNumber}>{pokemonDetail.hp}</span>
      <input class={styles.stat_bar_fill} type="range"  min="0"
         max='200' disabled value={pokemonDetail.hp} />
-     </label>
+     
      </div>
 
      <div className={styles.stat}>
-     <label className={styles.stat_bar_label} for="range"> Height : <span className={styles.statNumber}>{pokemonDetail.hp}</span>
+     <label className={styles.stat_bar_label} for="range"> Height : </label> <span className={styles.statNumber}>{pokemonDetail.hp}</span>
      <input class={styles.stat_bar_fill} type="range"  min="0"
         max='200' disabled value={pokemonDetail.hp} />
-     </label>
+     
      </div>
 
      </div>

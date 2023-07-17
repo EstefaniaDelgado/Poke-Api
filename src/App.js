@@ -4,6 +4,7 @@ import ComponenteError from './components/CompError/CompError';
 import Home from './components/Home/Home';
 import LandingPage from './components/LandingPage/LandingPage';
 import PokemonCreated from './components/PokemonCreated/PokemonCreated';
+import './App.css'
 
 function App() {
   return (

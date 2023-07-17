@@ -75,6 +75,15 @@ button:hover{
   background-color: #ca3a3a;
 }
 
+/* Contenedor de todos los Pokemons */
+.containerAllPokemons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* Cartas Pokemons */
 .containerCard{
   display:inline-block;

@@ -201,7 +201,7 @@ const Home = () => {
           currentPage={currentPage}
         />
 
-       <div>
+       <div className={styles.containerAllPokemons}>
          { !currentPokemons.length ?
 
          <div className={styles.imgLoading}>

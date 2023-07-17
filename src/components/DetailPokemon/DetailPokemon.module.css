@@ -22,11 +22,10 @@
   background-color: #fcffe9; 
   border-radius: 20px;
   width: 290px;
-  height: 380px;
+  height: 390px;
   box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   margin: 80px 0;
- 
-  
+  padding: 5px;
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
@@ -41,24 +40,41 @@
 	width: 200px;
 	height: 150px;
   margin: auto; 
+  transition: transform 0.2s linear;
 }
 
+.cardDetail img:hover{
+  transform: scale(1.1);
+}
 
 .headings{
+  width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-items: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  position: relative;
  
  
 }
 
 .headings i{
   cursor: pointer;
+  position: absolute;
+  left: 5px;
+  top: 2px;
  
 }
 
+.headings h1 {
+  transition: transform 0.3s linear;
+}
+
+.headings h1:hover {
+  /* box-shadow:  0px 0px 10px 0px rgba(0, 0, 0, 0.3); */
+  transform: scaleX(1.05);
+
+}
 
 
 .stat_group{
@@ -66,14 +82,18 @@
     flex-direction: column;
     text-align: left;
     margin-top: 5px;
+    gap: 4px;
 }
 
 .stat {
-  margin-right: 10px;
+  /* margin-right: 10px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .statNumber{
-  margin: 5px;
+  /* margin: 5px; */
 }
 
 .stat_bar_fill{
@@ -113,8 +133,12 @@ input[type=range][name=ataque]::-moz-range-track {
 
 .stat_bar_label{
   font-family: "Anybody";
-  padding-left: 10px;
+  /* padding-left: 10px; */
   font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 61px;
 }
 
 .types{
@@ -155,24 +179,24 @@ input[type=range][name=ataque]::-moz-range-track {
 
 @media (max-width:1093px){
 
-.cardDetail h1{
+/* .cardDetail h1{
   margin-right: 80px;
 }
 
 .cardDetail i{
   margin-right: 45px; 
-}
+} */
 
 }
 
 @media (max-width:2000px){
 
-.cardDetail h1{
+/* .cardDetail h1{
     margin-right: 50px;
   }
   
 .cardDetail i{
   margin-right: 45px; 
-}
+} */
 }
 
