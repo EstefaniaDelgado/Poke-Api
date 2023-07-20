@@ -1,5 +1,6 @@
 # Poke-Api 📺
 Project was created using API of a popular cartoon program called Pokemón. 
+<img height="150" src="./pokemon.png" />
 
 <hr>
 CREATE PROJECT🔧:
