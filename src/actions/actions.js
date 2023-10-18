@@ -32,7 +32,8 @@ export const getPokemons = ()=>{
 export const getTypes =()=>{
     return async function(dispatch){
         try {
-            await fetch("https://backend-pokemon-np5d.onrender.com/types")
+          
+            await fetch("https://poke-api-backend-production.up.railway.app/types")
             .then(response=> response.json())
             .then(data=>dispatch({type:GET_TYPES, payload:data}))
         } catch (error) {
